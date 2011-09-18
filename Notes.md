@@ -98,26 +98,26 @@ Default 5MB of max space - if exceeded, _QUOTA_EXCEEDED_ERROR_
 
 ##Canvas!
 
-Attributes
+**Attributes**
 
 Can be styled just like an image. Any content between the tags are displayed by browsers who don't support canvas.
 
 * width
 * height
 
-To draw, we have to get the context of the canvas
-var ctx = canvas.getContext("2D")
+To draw, we have to get the **context of the canvas**:
+_var ctx = canvas.getContext("2D")_
 
-Rectangle: Methods
+**Rectangle: Methods**
 
-All take the same x,y,width,height arguements
+_All take the same x,y,width,height arguements_
 
 * fillStyle
 * fillRect
 * strokeRect
 * clearRect
 
-Paths: Methods
+**Paths: Methods**
 
 * beginPath()
 * arc()
