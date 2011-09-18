@@ -46,6 +46,8 @@ $(".element").live('click', function() {
 
 ##AutoSuggest
 
+Have a large data source with too many options, and wish to simplify a user's searching ability via autocomplete? Simple enough.
+
 ```<script src="../javascript/jqueryUI/jquery.ui.autocomplete.js" type="text/javascript"></script>```
 
 ```
