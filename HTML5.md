@@ -106,7 +106,7 @@ Can be styled just like an image. Any content between the tags are displayed by 
 * height
 
 To draw, we have to get the **context of the canvas**:
-_var ctx = canvas.getContext("2D")_
+```var ctx = canvas.getContext("2D")```
 
 **Rectangle: Methods**
 
