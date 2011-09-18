@@ -70,3 +70,9 @@ Some New Types:
 
 ##Local Storage
 
+Sometimes referenced as 'DOM Storage'.  Simple way to store **key/value pairs**.  Similar to cookies, but bigger and stays local.  Wide support.
+
+Caviats
+
+* Key is a string
+* Data can be any JavaScript data type - but stored as a string
