@@ -65,6 +65,6 @@ $('#element').autocomplete({
 
 ##Plug-ins
 
-* gchart - Jquery Google Charts plug-in
-* Sparklines - Edward Tufte http://www.edwardtufte.com/tufte/index
+* **gchart** - Jquery Google Charts plug-in
+* **sparklines** - Edward Tufte http://www.edwardtufte.com/tufte/index
 
