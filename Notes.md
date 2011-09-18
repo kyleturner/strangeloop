@@ -50,7 +50,7 @@ Why?
 
 These input types leverage the _keyboard input types on your mobile device_.
 
-Replace that silly large space bar with an **@** and a **.** symbol when typing an e-mail
+Replace that silly large space bar with an **@ symbol** and a **period**  when typing an e-mail
 Entering a phone number?  Make the input type **tel** and the number keypad will be displayed
 
 
