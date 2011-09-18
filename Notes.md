@@ -57,5 +57,5 @@ Entering a phone number?  Make the input type **tel** and the number keypad will
 
 ##Handy Javascript Also Included
 
-* stepUp() and stepUp() methods to increase the value of _n_
+* $ stepUp() and $ stepUp() methods to increase the value of _n_
 * valueAsNumber - converts string value to an actual number value
