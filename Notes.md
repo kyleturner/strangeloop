@@ -1,6 +1,11 @@
 
 #Strange Loop Workshop 1: HTML5 - Nathaniel Schutta
 
+##Userful Links
+
+* http://html5examples.com
+* http://html5demos.com
+
 ##Modernizr!
 
 http://modernizr.com
@@ -30,9 +35,9 @@ What Can Your Browser Do:
 * mark - highlight; calls attention to something
 
 
-##New Input Types! (13)
+##New Input Types! (13 in total)
 
-If the browser doesn't support it, its treated as text.
+If the browser doesn't support it, its treated as text field.
 
 Some New Types:
 
@@ -57,10 +62,11 @@ Some New Types:
 ##Handy Javascript Also Included
 
 * _stepUp()_ and _stepUp()_ methods to increase the value of _n_
-* _valueAsNumber_ : converts string value to an actual number value.
+* _valueAsNumber_ attribute converts string value to an actual number value.
 
 ##Other Attributes
 
 * _required_ : a required field on a form (still have to identify to user that it is required)
 * _autofocus_ 
 * _placeholder_ 
+* _novalidate_ : Add this attribute to a form to remove default validation
