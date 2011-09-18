@@ -82,19 +82,19 @@ Caviats
 
 Can treat local storage as associated array, aka **bracket notation**
 
-* _localStorage['key']_ == _localStorage.getItem('key')_
-* _localStorage.length_ - number of stored values in local storage
-* _key(index)_ - retrieves key @ given index
+* ```localStorage['key']``` == ```localStorage.getItem('key')```
+* ```localStorage.length``` - number of stored values in local storage
+* ```key(index)``` - retrieves key @ given index
 * index out of bounds returns **null**
 
 StorageEvent - cannot cancel a storage event!
 
 Default 5MB of max space - if exceeded, _QUOTA_EXCEEDED_ERROR_ 
 
-* _key_
-* _oldValue_
-* _newValue_
-* _url_ of caller
+* ```key```
+* ```oldValue```
+* ```newValue```
+* ```url``` of caller
 
 ##Canvas!
 
