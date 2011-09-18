@@ -3,14 +3,12 @@
 
 ##Userful Links
 
-* http://html5examples.com
 * http://html5demos.com
+* http://diveintohtml5.org
 
-##Modernizr!
+##Modernizr
 
-http://modernizr.com
-
-JavaScript library that detects the availability of native implementations for next-generation web technologies, i.e. features that stem from the HTML5 and CSS3 specifications
+http://modernizr.com : JavaScript library that detects the availability of native implementations for next-generation web technologies, i.e. features that stem from the HTML5 and CSS3 specifications
     
 What Can Your Browser Do:
 
