@@ -76,3 +76,10 @@ Caviats
 
 * Key is a string
 * Data can be any JavaScript data type - but stored as a string
+
+* getItem(key) - returns _null_ if bad key provided
+* setItem(key, value) - silently overwrites old values
+
+Can treat local storage as associated array, aka **bracket notation**
+
+* localStorage['key'] == localStorage.getItem('key')
