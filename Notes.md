@@ -43,19 +43,24 @@ Some New Types:
 * telephone number (tel)
 * url
 * email
+* password
 * date, month, week, timestamp
 * datetime
 * number - allows step, value, min, and max attributes
 
-Why?
+**Why?**
 
-These input types leverage the _keyboard input types on your mobile device_.
-
-Replace that silly large space bar with an **@ symbol** and a **period**  when typing an e-mail
-
-Entering a phone number?  Make the input type **tel** and the number keypad will be displayed
+* These input types leverage the _keyboard input types on your mobile device_.
+* Replace that silly large space bar with an **@ symbol** and a **period**  when typing an e-mail
+* Entering a phone number?  Make the input type **tel** and the number keypad will be displayed
 
 ##Handy Javascript Also Included
 
 * _stepUp()_ and _stepUp()_ methods to increase the value of _n_
 * _valueAsNumber_ : converts string value to an actual number value.
+
+##Other Attributes
+
+* _required_ : a required field on a form (still have to identify to user that it is required)
+* _autofocus_ 
+* _placeholder_ 
