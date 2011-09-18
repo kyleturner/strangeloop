@@ -7,7 +7,7 @@ http://modernizr.com
 
 JavaScript library that detects the availability of native implementations for next-generation web technologies, i.e. features that stem from the HTML5 and CSS3 specifications
     
-What Can Your Browser Do
+What Can Your Browser Do:
 
 * http://caniuse.com
 * http://findmebyip.com
@@ -34,14 +34,24 @@ What Can Your Browser Do
 
 If the browser doesn't support it, its treated as text.
 
-Some New Types
+Some New Types:
 
 * search
 * spinner
 * slider
 * color picker
-* telephone number
+* telephone number (tel)
 * url
 * email
 * date, month, week, timestamp
 * datetime
+
+Why?
+
+These input types leverage the _keyboard input types on your mobile device_.
+
+Replace that silly large space bar with an **@** and a **.** symbol when typing an e-mail
+Entering a phone number?  Make the input type **tel** and the number keypad will be displayed
+
+
+
