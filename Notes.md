@@ -82,4 +82,47 @@ Caviats
 
 Can treat local storage as associated array, aka **bracket notation**
 
-* localStorage['key'] == localStorage.getItem('key')
+* _localStorage['key']_ == _localStorage.getItem('key')_
+* _localStorage.length_ - number of stored values in local storage
+* _key(index)_ - retrieves key @ given index
+* index out of bounds returns **null**
+
+StorageEvent - cannot cancel a storage event!
+
+Default 5MB of max space - if exceeded, _QUOTA_EXCEEDED_ERROR_ 
+
+* _key_
+* _oldValue_
+* _newValue_
+* _url_ of caller
+
+##Canvas!
+
+Attributes
+
+Can be styled just like an image. Any content between the tags are displayed by browsers who don't support canvas.
+
+* width
+* height
+
+To draw, we have to get the context of the canvas
+var ctx = canvas.getContext("2D")
+
+Rectangle: Methods
+
+All take the same x,y,width,height arguements
+
+* fillStyle
+* fillRect
+* strokeRect
+* clearRect
+
+Paths: Methods
+
+* beginPath()
+* arc()
+* closePath()
+* stroke()
+* fill()
+* moveTo()
+* stroke()
