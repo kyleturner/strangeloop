@@ -30,28 +30,32 @@ What Can Your Browser Do:
 * mark - highlight; calls attention to something
 
 
-##New Input Types!
+##New Input Types! (13)
 
 If the browser doesn't support it, its treated as text.
 
 Some New Types:
 
-* search
+* search (with a given cancellation button, wahoo)
 * spinner
-* slider
+* slider (range)
 * color picker
 * telephone number (tel)
 * url
 * email
 * date, month, week, timestamp
 * datetime
+* number - allows step, value, min, and max attributes
 
 Why?
 
 These input types leverage the _keyboard input types on your mobile device_.
 
 Replace that silly large space bar with an **@ symbol** and a **period**  when typing an e-mail
+
 Entering a phone number?  Make the input type **tel** and the number keypad will be displayed
 
+##Handy Javascript Also Included
 
-
+* stepUp() and stepUp() methods to increase the value of _n_
+* valueAsNumber - converts string value to an actual number value
