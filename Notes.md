@@ -3,8 +3,8 @@
 JavaScript library that detects the availability of native implementations for next-generation web technologies, i.e. features that stem from the HTML5 and CSS3 specifications
     
 What Can Your Browser Do:
-  * [caniuse][http://caniuse.com]
-  * [findmebyip][http://findmebyip.com]
+  * http://caniuse.com
+  * http://findmebyip.com
 
 
 ##HTML5 Goodness
