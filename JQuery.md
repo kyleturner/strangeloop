@@ -1,11 +1,11 @@
 #Strange Loop Workshop 2: JQuery - Nathaniel Schutta
 
+##Basics 
 
-Called when the document loads
+* Called when the document loads
 
-```$(document).ready(function() {
-    })
-```
+```$().ready(function() {})```
+
 
 ##CSS Selectors
 
@@ -15,7 +15,6 @@ For Example:
 
 Toggling the visibility of a child element.  calling ```next()``` grabs the child element of the _header_ class, and toggles the display.  Also, ```toggleClass``` will change _this_'s expanded class to closed, and vise-versa when clicked.
 
-
 ```
     $(".header").click(function() {
         $(this).next().toggle()
@@ -23,4 +22,6 @@ Toggling the visibility of a child element.  calling ```next()``` grabs the chil
     })
 ```
 
+
+##Something
 
