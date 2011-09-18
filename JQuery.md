@@ -38,13 +38,15 @@ How can we update the DOM _live_?  How can we attach to elements that haven't be
 * use live() function so the **new** elements are clickable too!
 
 ```
-$(".live-clickme").live('click', function() {
-    $(this).parent().append('<li class="live-clickme">Hey here\'s another live-clickme item!</li>')
+$(".element").live('click', function() {
+    $(this).parent().append('<li class="element">Hey here\'s another clickme item!</li>')
 })
 ```
 
 
 ##AutoSuggest
+
+```<script src="../javascript/jqueryUI/jquery.ui.autocomplete.js" type="text/javascript"></script>```
 
 ```
 $('#element').autocomplete({
