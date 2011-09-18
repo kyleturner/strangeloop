@@ -63,10 +63,10 @@ Some New Types:
 
 ##Other Attributes
 
-* _required_ : a required field on a form (still have to identify to user that it is required)
-* _autofocus_ 
-* _placeholder_ 
-* _novalidate_ : Add this attribute to a form to remove default validation
+* ```required``` : a required field on a form (still have to identify to user that it is required)
+* ```autofocus```
+* ```placeholder```
+* ```novalidate``` : Add this attribute to a form to remove default validation
 
 ##Local Storage
 
@@ -77,8 +77,8 @@ Caviats
 * Key is a string
 * Data can be any JavaScript data type - but stored as a string
 
-* getItem(key) - returns _null_ if bad key provided
-* setItem(key, value) - silently overwrites old values
+* ```getItem(key)``` - returns _null_ if bad key provided
+* ```setItem(key, value)``` - silently overwrites old values
 
 Can treat local storage as associated array, aka **bracket notation**
 
