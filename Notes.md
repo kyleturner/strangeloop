@@ -1,4 +1,3 @@
-
 #Strange Loop Workshop 1: HTML5 - Nathaniel Schutta
 
 ##Userful Links
@@ -68,3 +67,6 @@ Some New Types:
 * _autofocus_ 
 * _placeholder_ 
 * _novalidate_ : Add this attribute to a form to remove default validation
+
+##Local Storage
+
