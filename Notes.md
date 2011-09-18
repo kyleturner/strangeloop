@@ -58,4 +58,4 @@ Entering a phone number?  Make the input type **tel** and the number keypad will
 ##Handy Javascript Also Included
 
 * _stepUp()_ and _stepUp()_ methods to increase the value of _n_
-* _valueAsNumber_ : converts string value to an actual number value
+* _valueAsNumber_ : converts string value to an actual number value.
