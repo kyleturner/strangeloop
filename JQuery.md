@@ -2,9 +2,7 @@
 
 ##Basics 
 
-* Called when the document loads
-
-```$().ready(function() {})```
+* Called when the document loads: ```$().ready(function() {})```
 
 
 ##CSS Selectors
