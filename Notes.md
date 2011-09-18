@@ -1,4 +1,9 @@
-#Modernizr - Feature Detection!
+
+#Strange Loop Workshop 1: HTML5 - Nathaniel Schutta
+
+##Modernizr!
+
+http://modernizr.com
 
 JavaScript library that detects the availability of native implementations for next-generation web technologies, i.e. features that stem from the HTML5 and CSS3 specifications
     
@@ -28,3 +33,15 @@ What Can Your Browser Do
 ##New Input Types!
 
 If the browser doesn't support it, its treated as text.
+
+Some New Types
+
+* search
+* spinner
+* slider
+* color picker
+* telephone number
+* url
+* email
+* date, month, week, timestamp
+* datetime
