@@ -52,8 +52,9 @@ Have a large data source with too many options, and wish to simplify a user's se
 
 ```
 $('#element').autocomplete({
-            source: providedDataSource
-        })
+    source: providedDataSource
+})
 ```
 
 
+##
