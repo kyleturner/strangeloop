@@ -99,12 +99,39 @@ Compile time function to call when compiler runs
     rvm install jruby
     rvm jruby
     gem install mirah
-    gem install pindah - build tool (typically use master branch on GitHub)
+    gem install pindah - build tool (typically use master branch on GitHub) http://github.com/mirah/pindah
 
 _First, we'll touch on the "mixed source" (an existing Java app):_
 
-Maven/Ant
+mirahc can't compile Java sources, so treat one portion of codebase like a library so one gets compiled first (soon to be fixed)
 
+_Pure Mirah:_
 
+Uses Pindah: Works via rake to generate build files and run them
 
+```pindah create org.example.hello [/path/to/hello_world] [HelloActivity]```
+
+Rakefile
+
+```require "rubygems"
+require "pindah"
+
+Pindah.spec = {
+    :name => "mirah-guide",
+    :target_version => "2.2"
+}
+```
+
+rake -T
+
+* rake clean
+* rake compile
+* rake debug
+* rake install
+* rake javac
+* rake logcat
+* rake release
+etc...
+
+Checkout the github mirah example project, and run ```git tag -l``` to see steps throughout development process
 
