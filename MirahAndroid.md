@@ -10,6 +10,8 @@ http://www.mirah.org
 
 https://github.com/zapnap/protoform
 
+http://blog.zerosum.org/2010/12/20/mirah-and-android.html
+
 ##What is Mirah?
 
 An island of Java - Javanese for "Ruby"
