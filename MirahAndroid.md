@@ -103,7 +103,7 @@ Compile time function to call when compiler runs
 
 _First, we'll touch on the "mixed source" (an existing Java app):_
 
-mirahc can't compile Java sources, so treat one portion of codebase like a library so one gets compiled first (soon to be fixed)
+**mirahc can't compile Java sources, so treat one portion of codebase like a library so one gets compiled first (soon to be fixed)**
 
 _Pure Mirah:_
 
@@ -133,5 +133,4 @@ rake -T
 * rake release
 etc...
 
-Checkout the github mirah example project, and run ```git tag -l``` to see steps throughout development process
-
+**Checkout the github mirah example project, and run ```git tag -l``` to see steps throughout development process**
