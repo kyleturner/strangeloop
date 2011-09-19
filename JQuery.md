@@ -66,5 +66,5 @@ $('#element').autocomplete({
 ##Plug-ins
 
 * **gchart** - Jquery Google Charts plug-in
-* **sparklines** - Edward Tufte http://www.edwardtufte.com/tufte/index
+* **sparklines** - Edward Tufte http://www.edwardtufte.com/tufte/index (Stock prices, exchange rates, etc.)
 
