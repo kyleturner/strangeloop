@@ -100,9 +100,7 @@ _First big area of integration, not fully exploited_
     * Widget that Google provides, applications can plug into it to provide search results/suggestions
     * Receive an intent when someone searches for something; obtains from a ```ContentProvider```
     * Has to be enabled by the user to allow "quick search box" for your user
-    
     * **Searchable Activity**
-    
         * Activity with configuration added to it; knows how to deal with Search intents - ```android.intent.action.SEARCH```
         * Periodically asks content provider for suggestions based on search input
 
