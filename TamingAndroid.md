@@ -32,8 +32,11 @@ http://tamingandroid.com
 
 _Adds depth, character, and even a feel of texture_
 
-* extend LinearLayout
-* setBackgroundResource(R.drawable.plaastic_windor_background) - defined from the XML file
+**invalidate dawables when bounds change**
+**test w/ bright, primary colors**
+
+* extend ```LinearLayout```
+* ```setBackgroundResource(R.drawable.plaastic_windor_background)``` - defined from the XML file
 
 * Triangular Shine
     * get width/height of view, multiply it by 0.85, will scale to any screen size
@@ -41,9 +44,17 @@ _Adds depth, character, and even a feel of texture_
     * ```path.moveTo```
     * ```path.lineTo```
     * ```path.close```
-    * ```path.setShinePath()```
+    * ```path.setShinePath()``` - shinePath defined variable on object
     
     * override ```dispatchDraw```
         * draw the shine (```drawPath(shinePath, shinePaint)```)
         * draw the childen (```super.dispatchDraw(canvas)```)
+
+    * XML Usage (define fully qualified plastic name)
+
+
+##Custom Attributes
+
+* ```res/values/attrs.xml```
+* declare-styleable, list attributes (caption, captionSize, placeholder)
 
