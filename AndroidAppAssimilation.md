@@ -44,9 +44,13 @@
     **Operations:** 
     
     * Encoded as URIs
+    
     * Client is ```ContentResolver``` or ```CursorLoader```
+    
     * Query result is a cursor over rows
+    
     * inserts/updates are packed into ```ContentValues``` (sending something into a content providers, pack them into contentvalues)
+    
     * Batching mechanism - ```ContentProviderOperations```
     
 * **RemoteViews**: 
