@@ -2,7 +2,7 @@
 
 ##Building Blocks
 
-* Intents: Way to package up something you want something else to deal with
+* **Intents**: Way to package up something you want something else to deal with
 
     Thing that should happen when something is clicked on
     
@@ -17,7 +17,7 @@
     May be broadcast by the system
     
     
-* Providers: 
+* **Providers**: 
 
     Really "client libraries", encapsulate access to content providers and intents
     
@@ -25,11 +25,11 @@
     
     NOT the same thing as ContentProviders
 
-* Activities: 
+* **Activities**: 
 
-* Services: 
+* **Services**: 
 
-* ContentProviders: 
+* **ContentProviders**: 
     
     Provide access to your app's data on request (similar to web services)
     
@@ -52,7 +52,7 @@
         
         Batching mechanism - ContentProviderOperations
     
-* RemoteViews: 
+* **RemoteViews**: 
 
     "Web markup" essentially
     
@@ -69,11 +69,11 @@
 
 First big area of integration, not fully exploited
 
-1. Shortcuts - anything intended for an intent can be wired to a shortcut
+1. **Shortcuts** - anything intended for an intent can be wired to a shortcut
 
     Offer ways for users to place items on the launcher (static folder)
 
-2. Live Folders
+2. **Live Folders**
 
     Gets filled with data from the selected application
     
@@ -87,7 +87,7 @@ First big area of integration, not fully exploited
     
     set of columns pre-defined for live folders that can be set
   
-3. AppWidgets
+3. **AppWidgets**
 
     For frequently used controls within an application
     
@@ -102,7 +102,7 @@ First big area of integration, not fully exploited
 
 ##More Easy Stuff
 
-1. Quick Search Box
+1. **Quick Search Box**
 
     Widget that Google provides, applications can plug into it to provide search results/suggestions
 
@@ -114,3 +114,5 @@ First big area of integration, not fully exploited
     
         Activity with configuration added to it; knows how to deal with Search intents (android.intent.action.SEARCH)
 
+    Periodically asks content provider for suggestions based on search input
+    
