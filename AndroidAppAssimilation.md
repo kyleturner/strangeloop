@@ -21,7 +21,7 @@
 
     * Really "client libraries", encapsulate access to content providers and intents
     
-    * ContentProviders + Intents + Interface
+    * ```ContentProviders``` + ```Intents``` + ```Interface```
     
     * NOT the same thing as ContentProviders
 
@@ -44,10 +44,10 @@
     **Operations:** 
     
         * Encoded as URIs
-        * Client is ContentResolver or CursorLoader
+        * Client is ```ContentResolver``` or ```CursorLoader```
         * Query result is a cursor over rows
-        * inserts/updates are packed into ContentValues (sending something into a content providers, pack them into contentvalues)
-        * Batching mechanism - ContentProviderOperations
+        * inserts/updates are packed into ```ContentValues``` (sending something into a content providers, pack them into contentvalues)
+        * Batching mechanism - ```ContentProviderOperations```
     
 * **RemoteViews**: 
 
@@ -57,14 +57,14 @@
     
     * Packages a layout with basic behavior
     
-    * "basic behavior" == PendingINtents for onCLick
+    * "basic behavior" == ```PendingIntents``` for ```onCLick```
     
     * Helpful utility methods for common views
 
     
 ##Launcher
 
-First big area of integration, not fully exploited
+_First big area of integration, not fully exploited_
 
 1. **Shortcuts** - anything intended for an intent can be wired to a shortcut
 
@@ -82,12 +82,11 @@ First big area of integration, not fully exploited
 3. **AppWidgets**
 
     * For frequently used controls within an application
-    * Have to be able to provide the remote view that gets created, register an AppWidgetProvider that's capable of receiving intents
+    * Have to be able to provide the remote view that gets created, register an ```AppWidgetProvider``` that's capable of receiving intents
     
         * Update appWidget if new content needs to be displayed within the view
     
-    * Includes a configuration file for: screen real estate (minWidth, minHeight), refresh frequency (updatePeriodMillis), initialLayout
-    * AppWidgetProvider
+    * Includes a configuration file for: screen real estate (```minWidth```, ```minHeight```), refresh frequency (```updatePeriodMillis```), ```initialLayout```
     
 
 ##More Easy Stuff
@@ -95,12 +94,12 @@ First big area of integration, not fully exploited
 1. **Quick Search Box**
 
     * Widget that Google provides, applications can plug into it to provide search results/suggestions
-    * Receive an intent when someone searches for something; obtains from a ContentProvider
+    * Receive an intent when someone searches for something; obtains from a ```ContentProvider```
     * Has to be enabled by the user to allow "quick search box" for your user
     
     **Searchable Activity**
     
-        * Activity with configuration added to it; knows how to deal with Search intents (android.intent.action.SEARCH)
+        * Activity with configuration added to it; knows how to deal with Search intents - ```android.intent.action.SEARCH```
         * Periodically asks content provider for suggestions based on search input
 
 2. **QuickContactBadge**
@@ -124,8 +123,8 @@ First big area of integration, not fully exploited
 _Google Account, Twitter account, any account can be added here (for your app!)_
 
 * Register a service that knows how to give back an "authenticator"
-* Authenticator will extend "AbstractAccountAuthenticator"
-* LoginActivity
+* Authenticator will extend ```AbstractAccountAuthenticator```
+* ```LoginActivity```
 * Token exchange protocol available, similar to OAuth, to validate the user later on
 
 
@@ -133,6 +132,7 @@ _Google Account, Twitter account, any account can be added here (for your app!)_
 
 _Every contact has three sets of operations:_
 
-* base record (ACCOUNT_NAME, ACCOUNT_TYPE, SYNC1, SOURCE_ID) for name, type, and some artbitrary ID
+* base record (```ACCOUNT_NAME, ACCOUNT_TYPE, SYNC1, SOURCE_ID```) for name, type, and some artbitrary ID
 * email address 
 * account profile (ex: A StrangeLoop profile)
+* many other modifications that 'need' to be done to correctly add a contact with all needed info.
