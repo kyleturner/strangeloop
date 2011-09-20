@@ -4,26 +4,26 @@
 
 * **Intents**: Way to package up something you want something else to deal with
 
-    Thing that should happen when something is clicked on
+    * Thing that should happen when something is clicked on
     
-    I have something that needs to be viewed, shared, and let the system dispatch to whoever
+    * I have something that needs to be viewed, shared, and let the system dispatch to whoever
     
     **Implicit**: 'Caught' by intent filters
     
-    Intents are parcelable
+    * Intents are parcelable
     
     **PendingIntents** for deferred firing: Way to say I need this data delt with, but hang onto the data and fire when you need to (useful for similar things to callbacks)
     
-    May be broadcast by the system
+    * May be broadcast by the system
     
     
 * **Providers**: 
 
-    Really "client libraries", encapsulate access to content providers and intents
+    * Really "client libraries", encapsulate access to content providers and intents
     
-    ContentProviders + Intents + Interface
+    * ContentProviders + Intents + Interface
     
-    NOT the same thing as ContentProviders
+    * NOT the same thing as ContentProviders
 
 * **Activities**: 
 
@@ -31,26 +31,26 @@
 
 * **ContentProviders**: 
     
-    Provide access to your app's data on request (similar to web services)
+    * Provide access to your app's data on request (similar to web services)
     
-    Classes in andrid.content define, assist with high level protocol
+    * Classes in andrid.content define, assist with high level protocol
     
-    Tabular, no joins
+    * Tabular, no joins
     
-    Can also provide InputStreams and OutputStreams, FileHandles, Pipes, etc.
+    * Can also provide InputStreams and OutputStreams, FileHandles, Pipes, etc.
     
-    URI's (strings) can point to content providers
+    * URI's (strings) can point to content providers
     
     **Operations:** 
     
-        Encoded as URIs
-        Client is ContentResolver or CursorLoader
+        * Encoded as URIs
+        * Client is ContentResolver or CursorLoader
         
-        Query result is a cursor over rows
+        * Query result is a cursor over rows
         
-        inserts/updates are packed into ContentValues (sending something into a content providers, pack them into contentvalues)
+        * inserts/updates are packed into ContentValues (sending something into a content providers, pack them into contentvalues)
         
-        Batching mechanism - ContentProviderOperations
+        * Batching mechanism - ContentProviderOperations
     
 * **RemoteViews**: 
 
@@ -120,3 +120,11 @@ First big area of integration, not fully exploited
     * Copy multiple items @ once
     
     * pasting takes a lot of "guarding" around what you are copying (not a gaurantee what's being copied)
+    
+
+##Accounts
+
+Google Account, Twitter account, any account can be added here (for your app!)
+
+* Register a service that knows how to give back an "authenticator"
+* Authenticator will extend "AbstractAccountAuthenticator"
