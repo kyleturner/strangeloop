@@ -1,0 +1,155 @@
+Sections:
+-Road Map
+--Test Automatically
+---Testing manually will only give you sporadic test coverage.
+---Even if they take longer to write, you'll earn that time back because they are much faster to run
+--Unit Test
+---A unit test only exercises a single class, or at least a single one of your project's classes
+---Writing classes that are easily testable decreases dependencies
+----Independent classes are simpler to reason about
+---Unit tests are robust to changes in the test environment because they only exercise your project's classes and shouldn't have outside dependencies
+----This also makes them very fast
+---Downside: unit tests can fail to find bugs in the seams between classes
+--Integration Test
+---An integration test uses your whole system, or at least as many parts of your system as you can put into a test
+---The best way to know that your system works is to test as many of the real parts as they will actually be used
+---Downside: Integration tests are more brittle than unit tests because they usually have outside environmental dependencies
+----This can also make them slow
+--Interaction Test
+---An interaction test drives your system the same way a user would, with screen touches, keyboard presses, and device rotations
+---An interaction test is the best kind of integration test.
+---Downside: Interaction tests are usually interdependent.  If a single interaction test fails, it can bring down your entire suite.
+---Downside: Interaction tests are usually very slow compared to unit tests.
+--Mocking
+---Mocking keeps tests focused on your classes code instead of on setup
+---Mocking allows you to create situations that are difficult to reproduce in the real world (failures).
+---Mocking tracks explicit object interaction, which is important when testing delegates
+---Downside: If you incorrectly mock an objects' behavior, your unit tests will have bugs.
+----This is why integration testing is important!
+--Evaluation Criteria
+---Ease of setup, writing, and running tests
+---Error reporting
+---Debugging
+---Integration with Xcode
+---Integration with the command line
+--Demo
+---Simple Game
+---Roll two dice, try to total 7
+---Only allow one roll of each die per round
+---Track rounds played, won, win percentage
+---Allow the user to reset the game.
+-Unit
+--OCUnit
+---Setup
+http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/iphone_development/135-Unit_Testing_Applications/unit_testing_applications.html
+----Logic
+-----Really easy! Just add a unit testing target.
+----Application
+-----Duplicate your app target.  This target will host the ocunit test bundle which will hold the code and resources to test your app.
+-----Add a unit testing target.
+-----Add your unit testing target to your host target's dependencies.  This will ensure that your unit test bundle is built before your host.
+-----Add your unit test bundle to your host target's "Copy Bundle Resources" phase.  This hosts your tests inside your host.
+---Write a test
+----a test method starts with "test", takes no argument
+-----A source file can only exist in the either the test bundle or the Application Host bundle.  When you duplicate your app's target to make the Application Host, all of your sources will exist in the Application Host.  When a test requires a source, you must remove it from your Application Host before adding it to the test bundle or you'll see an error like this:
+objc[13130]: Class Die is implemented in both /var/mobile/Applications/8B61A346-2BD5-4659-B23C-C8AEA5C9B418/DiceGame.app/DiceGame and /private/var/mobile/Applications/8B61A346-2BD5-4659-B23C-C8AEA5C9B418/DiceGame.app/BuiltInApplicationUnitTest.octest/BuiltInApplicationUnitTest. One of the two will be used. Which one is undefined.
+And it can manifest itself as errors like this:
+http://stackoverflow.com/questions/5364074/
+-----A source file only has to be added to the test bundle if you use static methods from your source class in your test.  I don't know why this happens, please answer http://stackoverflow.com/questions/7210211/ if you know.  For organization purposes, I think it best to just move all your files over to the test bundle.
+----Assertions:
+-----STAssertEquals
+------Ensure that the types you use are equivalent (don't mix ints and longs)
+-----STAssertEqualObjects
+------Compares with -[NSObject isEqualTo:]
+---Running
+----http://stackoverflow.com/questions/1568992/
+----Logic Tests
+-----Use the "Test" scheme only in the Simulator, not on device
+-----Can't use UIKit, not sure about other limitations
+-----Run individual tests by editing the "Test" scheme.
+----Application Tests
+-----Use the "Run" scheme only on device, not in simulator
+-----Can't run individual tests unless you remove them from the target or comment out their methods.
+---Errors
+----Logic Tests
+-----Errors are reported within the Issue Navigator and in your source file as well as in the console output.
+-----Errors in source editor stay around until the test passes.
+----Application Tests
+-----Errors are only reported in console output.
+---Debugging
+-----Easy, just set a breakpoint and run your tests again
+---Command Line
+----Logic
+-----For JUnit-style output: https://github.com/hborders/BPOCUnitXMLReporter
+----Application Tests
+-----Application Tests only run on device and thus can't be run or triggered from the command line.
+------http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/iphone_development/135-Unit_Testing_Applications/unit_testing_applications.html
+--GTM
+---Setup
+----http://code.google.com/p/google-toolbox-for-mac/wiki/iPhoneUnitTesting
+---Write a test
+----a test method starts with "test", takes no argument
+----STAssertEqualStrings
+-----This is important for comparing i18n strings
+---Running
+----Just build your test app project, the tests run as part of a script.
+----Running your test app will only re-run tests that ran in the script.
+----Can't choose which tests to run, you need to comment out the test or remove the test class from the target.
+---Errors
+----Errors include line numbers and failure messages
+----Error report is equivalent to OCUnit, doesn't have hooks for configuring junit-style reports
+---Debugging
+----Disable the "Run Script" build phase
+----Add a breakpoint
+----Build and Run
+---Command Line
+----Just build your Test app with xcodebuild
+--GHUnit
+---Setup
+---Write a test
+---Running
+----Doesn't properly catch unexpected Exceptions in the Simulator.  It will crash.  GTM does it right.
+---Errors
+---Debugging
+---Command Line
+-Interaction
+--UIAutomation
+---Setup
+----http://developer.apple.com/library/ios/#documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/Built-InInstruments/Built-InInstruments.html#//apple_ref/doc/uid/TP40004652-CH6-SW76
+----The default accessibility options in the simulator don't work properly with UIAutomation
+-----http://stackoverflow.com/questions/1388179/accessibilitylabel-and-accessibilityhint-properties-arent-always-loaded-from-nib
+---Write a test
+----http://developer.apple.com/library/ios/#documentation/DeveloperTools/Reference/UIAutomationRef/Introduction/Introduction.html
+----https://github.com/alexvollmer/tuneup_js
+----include other scripts in the same directory with "#import"
+----Cool hardware Simulations
+-----Alerts
+------UIATarget.onAlert callback called whenever an alert is called. Return false if our test does nothing, return true if our test dealt with it.
+------Can't refer to alerts by Accessibility names, must use alert title and button titles.
+-----Multitasking
+------UIATarget.localTarget().deactivateAppForDuration(10)
+-------Simulates the user tapping the home button then tapping your app's icon again 10 seconds later
+-----Device rotation
+-----Hardware button presses
+---Running
+---Errors
+---Debugging
+----UIALogger severities: Debug, Message, Warning, Error
+---Command Line
+----No
+--UISpec
+---Setup
+----http://code.google.com/p/uispec/wiki/Installation
+----Need a duplicate app target to host your tests
+---Write a test
+----Behavior-Driven framework, test names should be "it should …"
+-----show dumps all properties of the query to a log
+-----flash highlights the UIView on the screen
+---Running
+-----Want to delay running your tests to allow all your startup items to load.
+-----You could also invoke runSpecs at a known safe point within your code.
+---Errors
+---Debugging
+---Command Line
+-Mocking
+-Custom Assertions
