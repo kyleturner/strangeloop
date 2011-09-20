@@ -115,4 +115,9 @@ First big area of integration, not fully exploited
         Activity with configuration added to it; knows how to deal with Search intents (android.intent.action.SEARCH)
 
     Periodically asks content provider for suggestions based on search input
-    
+
+2. **QuickContactBadge**
+
+    * Anything that could be created as a contact (friends, business listings, reguarly updated social media status)
+    * Displays pop-up with actions based on the contact you click on
+    * Can control how much real estate it takes up when displayed
