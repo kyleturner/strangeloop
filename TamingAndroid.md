@@ -25,7 +25,7 @@ http://tamingandroid.com
         * draw a round rectangle in a solid color via paint
             * ```paint =  new Paint(Paint.ANTI_ALIAS_FLAG)```
         * set Xfermode for the paint ``paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN))```
-        * save the layer onto the canvas ```canvas.saveLayer(outerRect, paint, Paint.FILTER_BITMAP_FLAG)
+        * save the layer onto the canvas ```canvas.saveLayer(outerRect, paint, Paint.FILTER_BITMAP_FLAG)```
         * ```canvas.restore()```
         
 ##Suttle Gradient Background
@@ -58,3 +58,25 @@ _Adds depth, character, and even a feel of texture_
 * ```res/values/attrs.xml```
 * declare-styleable, list attributes (caption, captionSize, placeholder)
 
+* Attribute Namespace
+
+
+##Pro Tips
+
+Anytime you have editable text field, look at ```android:imeOptions``` (you can control buttons on keyboard: actionDone, actionNext, etc.)
+
+* Register an OnEditorActionListener to handle when **done** button is clicked
+
+* set inputType to control what kind of keyboard appears (```phone```, ```textPersonName|textCapWords``` - always caps first letters of names)
+
+
+##ViewFlipper
+
+_Similar to iOS flipping views, or page view control.  ViewFlipper crashes app prior to Honeycomb_, catch IllegalArgumentExepction with **SaveViewFlipper**!
+
+
+##Square Contact Tab Screen
+
+* override ```getChildDrawingOrder``` to control stack of how cards are drawn
+* override drawChild(), call ```canvas.clipRect()```
+* ```canvas.translate()``` and ```canvas.rotate()``` - to portray stack of random cards within card case view
