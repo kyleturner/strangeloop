@@ -72,7 +72,9 @@ Anytime you have editable text field, look at ```android:imeOptions``` (you can 
 
 ##ViewFlipper
 
-_Similar to iOS flipping views, or page view control.  ViewFlipper crashes app prior to Honeycomb_, catch IllegalArgumentExepction with **SaveViewFlipper**!
+_Similar to iOS flipping views, or page view control.  ViewFlipper crashes app prior to Honeycomb_ 
+
+Catch IllegalArgumentExepction with **SafeViewFlipper**!
 
 
 ##Square Contact Tab Screen
@@ -80,3 +82,8 @@ _Similar to iOS flipping views, or page view control.  ViewFlipper crashes app p
 * override ```getChildDrawingOrder``` to control stack of how cards are drawn
 * override drawChild(), call ```canvas.clipRect()```
 * ```canvas.translate()``` and ```canvas.rotate()``` - to portray stack of random cards within card case view
+
+##Suggested device for independent developer?
+
+* 800 x 480 (WVGA) most popular screen size
+* most popular phone is the HTC Evo
