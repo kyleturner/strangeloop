@@ -4,7 +4,7 @@ http://tamingandroid.com
 
 ##Custom View from Scratch
 
-Keep it Square
+**Keep it Square**
 
 * Extend View class
     * implement onMeasure method, ask superclass for default width and height (getSuggestedMinimumWidth, getSuggestedMinimumHeight)
@@ -15,7 +15,7 @@ Keep it Square
     * Don't use ```canvas.clipPath(roundedRect)``` = jagged rounded corners
     * Can use dimensions.xml file, but not scalable
     * use Alpha Compositing (google search _Alpha compositing_)
-        * ``paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN))```
+        * ```paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN))```
         * preserves anti-aliasing (smooth, nice corners…yum)
     * How?
         * Create imageDrawable (as bitmapDrawable or image placeholder)
@@ -28,5 +28,22 @@ Keep it Square
         * save the layer onto the canvas ```canvas.saveLayer(outerRect, paint, Paint.FILTER_BITMAP_FLAG)
         * ```canvas.restore()```
         
+##Suttle Gradient Background
 
-            
+_Adds depth, character, and even a feel of texture_
+
+* extend LinearLayout
+* setBackgroundResource(R.drawable.plaastic_windor_background) - defined from the XML file
+
+* Triangular Shine
+    * get width/height of view, multiply it by 0.85, will scale to any screen size
+    * create a new Path object
+    * ```path.moveTo```
+    * ```path.lineTo```
+    * ```path.close```
+    * ```path.setShinePath()```
+    
+    * override ```dispatchDraw```
+        * draw the shine (```drawPath(shinePath, shinePaint)```)
+        * draw the childen (```super.dispatchDraw(canvas)```)
+
