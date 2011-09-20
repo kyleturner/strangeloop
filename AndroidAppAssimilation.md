@@ -41,7 +41,7 @@
     
     * URI's (strings) can point to content providers
     
-    **Operations:** 
+* **Operations:** 
     
     * Encoded as URIs
     
