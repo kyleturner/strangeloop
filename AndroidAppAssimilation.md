@@ -37,7 +37,7 @@
     
     * Tabular, no joins
     
-    * Can also provide InputStreams and OutputStreams, FileHandles, Pipes, etc.
+    * Can also provide ```InputStreams``` and ```OutputStreams```, FileHandles, Pipes, etc.
     
     * URI's (strings) can point to content providers
     
@@ -73,7 +73,7 @@ First big area of integration, not fully exploited
 2. **Live Folders**
 
     * Gets filled with data from the selected application
-    * Intent = CREATE_LIVE_FOLDER
+    * Intent = ```CREATE_LIVE_FOLDER```
     * Display mode (icons, list, etc.)
     * Base intent: fired when clicked on, can ovverride intent for individual items
     * ContentProvider can "back" the live folder to provide the list of items that exist in that folder
@@ -121,7 +121,18 @@ First big area of integration, not fully exploited
 
 ##Accounts
 
-Google Account, Twitter account, any account can be added here (for your app!)
+_Google Account, Twitter account, any account can be added here (for your app!)_
 
 * Register a service that knows how to give back an "authenticator"
 * Authenticator will extend "AbstractAccountAuthenticator"
+* LoginActivity
+* Token exchange protocol available, similar to OAuth, to validate the user later on
+
+
+##Contacts
+
+_Every contact has three sets of operations:_
+
+* base record (ACCOUNT_NAME, ACCOUNT_TYPE, SYNC1, SOURCE_ID) for name, type, and some artbitrary ID
+* email address 
+* account profile (ex: A StrangeLoop profile)
