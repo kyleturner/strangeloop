@@ -43,11 +43,11 @@
     
     **Operations:** 
     
-        * Encoded as URIs
-        * Client is ```ContentResolver``` or ```CursorLoader```
-        * Query result is a cursor over rows
-        * inserts/updates are packed into ```ContentValues``` (sending something into a content providers, pack them into contentvalues)
-        * Batching mechanism - ```ContentProviderOperations```
+    * Encoded as URIs
+    * Client is ```ContentResolver``` or ```CursorLoader```
+    * Query result is a cursor over rows
+    * inserts/updates are packed into ```ContentValues``` (sending something into a content providers, pack them into contentvalues)
+    * Batching mechanism - ```ContentProviderOperations```
     
 * **RemoteViews**: 
 
@@ -136,3 +136,17 @@ _Every contact has three sets of operations:_
 * email address 
 * account profile (ex: A StrangeLoop profile)
 * many other modifications that 'need' to be done to correctly add a contact with all needed info.
+
+##But Wait!
+
+1. Look For Intents!
+
+    Spend some time looking through documentation to see which intents are available.  Pattern matching is even available!
+    
+2. Look in ```android.provider```
+
+    * ```.Browser``` - bookmarks, history, search history
+    * ```.AlarmClock``` - set an alarm
+    * ```.CallLog``` - who called whom, duration
+    * ```.MediaStore``` - audio, video, images, capture from hardware, direct updates or ```MediaScanner```
+    * ```.ContactsContract``` - all contact info, great examples for contract definition or ```ContentProvider``` mapping problems
