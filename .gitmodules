@@ -1,0 +1,6 @@
+[submodule "html5_workshop"]
+	path = html5_workshop
+	url = https://github.com/ntschutta/html5_workshop.git
+[submodule "jQuery_workshop"]
+	path = jQuery_workshop
+	url = https://github.com/ntschutta/jQuery_workshop.git
